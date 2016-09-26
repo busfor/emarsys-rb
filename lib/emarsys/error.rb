@@ -8,6 +8,8 @@ module Emarsys
       super(build_error_message)
     end
 
+    attr_reader :code, :text, :status
+
     def build_error_message
       "HTTP-Code: #{@status}, Emarsys-Code: #{@code} - #{@text}"
     end
